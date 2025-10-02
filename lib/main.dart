@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pinecitymall/pages/aboutpage/AboutPage.dart';
+import 'package:pinecitymall/pages/contactpage/ContactPage.dart';
 import 'package:pinecitymall/pages/homepage/HomePage.dart';
+import 'package:pinecitymall/pages/listofshopspage/ListOfShopsPage.dart';
+import 'package:pinecitymall/pages/mappage/MapPage.dart';
+import 'package:pinecitymall/pages/moviespage/MoviesPage.dart';
 // Import placeholders for other pages
 // import 'package:pinecitymall/pages/shops/ShopsPage.dart';
 // import 'package:pinecitymall/pages/movies/MoviesPage.dart';
@@ -17,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pine City Mall',
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: ThemeData(
         primaryColor: const Color(0xFF2C5F2D), // Pine Green
@@ -52,10 +58,14 @@ class _MainNavigationState extends State<MainNavigation> {
   // List of pages for navigation
   final List<Widget> _pages = [
     const HomePage(),
+    const ListOfShopsPage(),
+    const MoviesPage(),
+    const MapPage(),
+    const ContactPage(),
+    // const AboutPage(),
     // const ShopsPage(),
     // const MoviesPage(),
     // const MapPage(),
-    // const ContactPage(),
   ];
 
   void _onItemTapped(int index) {
