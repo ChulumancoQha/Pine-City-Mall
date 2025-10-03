@@ -7,22 +7,22 @@ class HomePage extends StatelessWidget {
     {
       "store": "Fashion Hub",
       "offer": "Up to 50% off on summer collection",
-      "image": "https://via.placeholder.com/150x100.png?text=Fashion"
+      "image": "assets/images/HomePageBanner.jpg"
     },
     {
       "store": "Tech World",
       "offer": "Buy 1 Get 1 Free on select accessories",
-      "image": "https://via.placeholder.com/150x100.png?text=Tech"
+      "image": "assets/images/HomePageBanner.jpg"
     },
     {
       "store": "Foodies Corner",
       "offer": "20% discount on family meals",
-      "image": "https://via.placeholder.com/150x100.png?text=Food"
+      "image": "assets/images/HomePageBanner.jpg"
     },
     {
       "store": "Book Haven",
       "offer": "30% off on bestsellers",
-      "image": "https://via.placeholder.com/150x100.png?text=Books"
+      "image": "assets/images/HomePageBanner.jpg"
     },
   ];
 
@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
                           ClipRRect(
                             borderRadius: const BorderRadius.vertical(
                                 top: Radius.circular(16)),
-                            child: Image.network(
+                            child: Image.asset(
                               offer["image"]!,
                               height: 120,
                               width: double.infinity,

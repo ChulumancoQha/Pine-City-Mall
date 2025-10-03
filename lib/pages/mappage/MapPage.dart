@@ -20,8 +20,8 @@ class MapPage extends StatelessWidget {
               height: 200,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(
-                    "https://via.placeholder.com/600x200.png?text=Pine+City+Mall+Map",
+                  image: AssetImage(
+                    "assets/images/MapPageBanner.jpg",
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -55,8 +55,8 @@ class MapPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.network(
-                  "https://via.placeholder.com/600x400.png?text=Detailed+Mall+Map",
+                child: Image.asset(
+                  "assets/images/MapPageBanner.jpg",
                   fit: BoxFit.cover,
                 ),
               ),

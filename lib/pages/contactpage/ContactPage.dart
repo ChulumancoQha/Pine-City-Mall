@@ -25,7 +25,7 @@ class ContactPage extends StatelessWidget {
                   image: AssetImage(
                     "assets/images/logo.png",
                   ),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
             ),

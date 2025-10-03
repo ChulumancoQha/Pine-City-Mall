@@ -9,31 +9,31 @@ class ListOfShopsPage extends StatelessWidget {
     "Clothing": [
       {
         "name": "Fashion Hub",
-        "logo": "https://via.placeholder.com/50.png?text=FH",
+        "logo": "assets/images/ShopsPageBanner.jpg",
       },
       {
         "name": "Style Point",
-        "logo": "https://via.placeholder.com/50.png?text=SP",
+        "logo": "assets/images/ShopsPageBanner.jpg",
       },
     ],
     "Electronics": [
       {
         "name": "Tech World",
-        "logo": "https://via.placeholder.com/50.png?text=TW",
+        "logo": "assets/images/ShopsPageBanner.jpg",
       },
       {
         "name": "Gadget Store",
-        "logo": "https://via.placeholder.com/50.png?text=GS",
+        "logo": "assets/images/ShopsPageBanner.jpg",
       },
     ],
     "Restaurants": [
       {
         "name": "Foodies Corner",
-        "logo": "https://via.placeholder.com/50.png?text=FC",
+        "logo": "assets/images/ShopsPageBanner.jpg",
       },
       {
         "name": "Pizza Palace",
-        "logo": "https://via.placeholder.com/50.png?text=PP",
+        "logo": "assets/images/ShopsPageBanner.jpg",
       },
     ],
   };
@@ -62,7 +62,7 @@ class ListOfShopsPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: ListTile(
-                    leading: Image.network(
+                    leading: Image.asset(
                       shop["logo"]!,
                       width: 50,
                       height: 50,

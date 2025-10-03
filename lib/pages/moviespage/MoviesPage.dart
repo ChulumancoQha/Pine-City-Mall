@@ -7,19 +7,19 @@ class MoviesPage extends StatelessWidget {
   final List<Map<String, String>> movies = const [
     {
       "title": "The Adventure",
-      "poster": "https://via.placeholder.com/100x150.png?text=Adventure",
+      "poster": "assets/images/cinema.jpg",
       "actors": "John Doe, Jane Smith",
       "age": "PG-13",
     },
     {
       "title": "Space Odyssey",
-      "poster": "https://via.placeholder.com/100x150.png?text=Space+Odyssey",
+      "poster": "assets/images/cinema.jpg",
       "actors": "Alice Green, Bob Brown",
       "age": "PG",
     },
     {
       "title": "Mystery Manor",
-      "poster": "https://via.placeholder.com/100x150.png?text=Mystery+Manor",
+      "poster": "assets/images/cinema.jpg",
       "actors": "Carol White, Dave Black",
       "age": "R",
     },
@@ -47,10 +47,11 @@ class MoviesPage extends StatelessWidget {
             child: ListTile(
               leading: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
-                child: Image.network(
+                child: Image.asset(
                   movie["poster"]!,
                   width: 60,
-                  fit: BoxFit.cover,
+                  height: 400,
+                  fit: BoxFit.fill,
                 ),
               ),
               title: Text(
