@@ -30,7 +30,6 @@ class ContactPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-
             // Contact Info
             Text(
               "Get in Touch",

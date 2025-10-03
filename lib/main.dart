@@ -5,14 +5,32 @@ import 'package:pinecitymall/pages/homepage/HomePage.dart';
 import 'package:pinecitymall/pages/listofshopspage/ListOfShopsPage.dart';
 import 'package:pinecitymall/pages/mappage/MapPage.dart';
 import 'package:pinecitymall/pages/moviespage/MoviesPage.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'dart:async';
+
 // Import placeholders for other pages
 // import 'package:pinecitymall/pages/shops/ShopsPage.dart';
 // import 'package:pinecitymall/pages/movies/MoviesPage.dart';
 // import 'package:pinecitymall/pages/map/MapPage.dart';
 // import 'package:pinecitymall/pages/contact/ContactPage.dart';
 
-void main() {
+Future<void> main() async {
+  // Ensure Flutter is ready
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+
+  // Keep the splash showing
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
   runApp(const MyApp());
+
+  // Initialize app
+  await initialization();
+}
+
+Future initialization() async {
+  // Simulate some startup delay (e.g., loading prefs, API calls, etc.)
+  await Future.delayed(Duration(seconds: 5));  // 👈 adjust time here
+  FlutterNativeSplash.remove();  // Remove splash after 5s
 }
 
 class MyApp extends StatelessWidget {
